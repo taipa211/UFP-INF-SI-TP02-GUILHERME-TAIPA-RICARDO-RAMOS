@@ -1,0 +1,65 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+header {
+    background: linear-gradient(45deg, #007bff, #00d2ff);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #28a745;
+    transform: scale(1.05);
+}
+
+.card {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+    border: 2px solid #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle, rgba(0,123,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    z-index: -1;
+    animation: fadeBg 6s infinite alternate;
+}
+
+@keyframes fadeBg {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Bases Numéricas</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../conversor bases/style.css"> 
+</head>
+<body>
+    <!-- Botão de Modo Escuro -->
+    <div class="dark-mode-toggle">
+        <button id="toggleDarkMode" class="btn btn-outline-secondary">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Conversor de Bases Numéricas</h1>
+    </header>
+
+    <main class="container my-4">
+        <div class="row">
+     
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h2 class="card-title">Conversão de Bases</h2>
+                        <form id="base-converter">
+                            <div class="mb-3">
+                                <label for="inputValue" class="form-label">Valor a converter</label>
+                                <input type="text" id="inputValue" class="form-control" placeholder="Digite o valor">
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputBase" class="form-label">Base de origem</label>
+                                <select id="inputBase" class="form-select">
+                                    <option value="2">Binário</option>
+                                    <option value="8">Octal</option>
+                                    <option value="10" selected>Decimal</option>
+                                    <option value="16">Hexadecimal</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="outputBase" class="form-label">Base de destino</label>
+                                <select id="outputBase" class="form-select">
+                                    <option value="2">Binário</option>
+                                    <option value="8">Octal</option>
+                                    <option value="10">Decimal</option>
+                                    <option value="16">Hexadecimal</option>
+                                </select>
+                            </div>
+                            <button type="button" id="convertButton" class="btn btn-outline-success">
+                                <i class="fas fa-exchange-alt"></i> Converter
+                            </button>
+                        </form>
+                        <div id="conversionResult" class="alert alert-info mt-3" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h2 class="card-title">Cálculo de Complemento para 2</h2>
+                        <form id="complement-calculator">
+                            <div class="mb-3">
+                                <label for="binaryInput" class="form-label">Valor binário (máx. 8 bits)</label>
+                                <input type="text" id="binaryInput" class="form-control" placeholder="Digite um número binário">
+                            </div>
+                            <button type="button" id="complementButton" class="btn btn-warning">
+                                <i class="fas fa-calculator"></i> Calcular Complemento
+                            </button>
+                        </form>
+                        <div id="complementResult" class="alert alert-info mt-3" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-2">
+        <p>Desenvolvido por Guilherme Taipa e Ricardo Ramos</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../conversor bases/script.js"></script>
+</body>
+</html>
